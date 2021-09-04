@@ -8,9 +8,7 @@ sourceCompatibility = 11
 targetCompatibility = 11
 
 repositories {
-
-    maven { url "https://repository.apache.org/content/repositories/snapshots/" }
-    maven { url "https://repo.maven.apache.org/maven2" }
+    mavenCentral()
 }
 
 dependencies {
@@ -21,6 +19,7 @@ dependencies {
         exclude group: 'org.apache.beam', module: 'beam-sdks-java-io-kafka'
     }
     implementation 'org.apache.beam:beam-sdks-java-extensions-json-jackson:2.32.0'
+    implementation 'org.apache.beam:beam-sdks-java-test-utils:2.32.0'
     testImplementation 'org.apache.beam:beam-sdks-java-io-common:2.32.0'
     testImplementation 'org.apache.beam:beam-runners-direct-java:2.32.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
